@@ -21,12 +21,8 @@
         <input type="text" name="raca" id="raca" required>
     </div>
     <div>
-        <label for="idade">Idade</label>
-        <input type="text" name="idade" id="idade" required>
-    </div>
-    <div>
-        <label for="data">Data de nascimento</label>
-        <select name="data" id="data"></select>
+        <label for="datan">Data de nascimento</label>
+        <input type="text" name="datan" id="datan"></input>
     </div>
     <div class="input-container">
         <label for="castrado">Castrado</label>

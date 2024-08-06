@@ -7,8 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Consulta de Cidades</h1>
-    <a href="CadastroAnimal.html" class="button">Cadastrar Nova Cidade</a>
+<?php
+    include('../includes/conexao.php');
+    $sql = "SELECT animal.id, animal.nome nomeanimal, animal.especie, animal.raca, animal.datan, animal.idade, pes.nome nomepessoa,
+            FROM Animal animal
+            LEFT JOIN pessoa pes ON pes.id = animal.id_pessoa";
+    $result = mysqli_query($con, $sql);
+
+    if(!$result){
+        die("Erro na culsulta: " . mysqli_error($con));
+    }
+?>
+    <h1>Consulta de Animais</h1>
+    <a href="CadastroAnimal.php" class="button">Cadastrar Novo Animal</a>
     <table align="center" border="1" width="80%">
         <tr>
             <th>Código</th>
@@ -18,6 +29,7 @@
             <th>Data de nascimento</th>
             <th>Idade</th>
             <th>Castrado</th>
+            <th>Pessoa</th>
             <th>Alterar</th>
             <th>Deletar</th>
         </tr>

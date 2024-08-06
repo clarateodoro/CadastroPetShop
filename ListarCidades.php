@@ -7,8 +7,18 @@
     <title>Document</title>
 </head>
 <body>
+<?php
+    include('../includes/conexao.php');
+    $sql = "SELECT cidade.id, cidade.nome nomecidade, cidade.estado
+            FROM Cidade cidade";
+    $result = mysqli_query($con, $sql);
+
+    if(!$result){
+        die("Erro na culsulta: " . mysqli_error($con));
+    }
+?>
     <h1>Consulta de Cidades</h1>
-    <a href="CadastroCidade.html" class="button">Cadastrar Nova Cidade</a>
+    <a href="CadastroCidade.php" class="button">Cadastrar Nova Cidade</a>
     <table align="center" border="1" width="80%">
         <tr>
             <th>Código</th>

@@ -43,6 +43,10 @@ VALUES ('João da Silva', 'joao.silva@example.com', 'Rua A, 123', 'Centro', 1, '
 INSERT INTO animal (nome, especie, raca, dataNascimento, id_pessoa)
 VALUES ('Rex', 'Cão', 'Labrador', '2015-05-10', 1);
 
+SELECT a.*,
+FLOOR(DATEDIFF(CURDATE(), a.dataNascimento)/365)idade
+FROM ANIMAL a;
+
 SELECT * FROM pessoa;
 SELECT * FROM animal;
 

@@ -21,6 +21,10 @@
                 <input type="text" name="enderece" id="endereco" required>
             </div>
             <div>
+                <label for="bairro">Bairro</label>
+                <input type="text" name="bairro" id="bairro" required>
+            </div>
+            <div>
                 <label for="cep">CEP</label>
                 <input type="text" name="cep" id="cep" required>
             </div>
